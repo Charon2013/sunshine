@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <link rel="shortcut icon" href="../../images/favicon.ico" />
+    <link rel="stylesheet" href="../../css/web.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/web.js"></script>
+    <script>
+        $(function(){
+             //logo更换颜色
+            $('.charon_logo').hover(function() {
+                $('.charon_logo img').attr('src', '../../images/LOGO_01.png');
+            },function(){
+                $('.charon_logo img').attr('src', '../../images/LOGO.png');
+            })
+        })
+    </script>
+    <style>
+    	 *{padding:0; margin:0; }
+        body{font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px; line-height:23px; color:#7c7b7b;}
+        img{border:0;}
+        ol,ul,li{list-style-position:inside;list-style:none;}
+        table{border-collapse:collapse; border-spacing:0; empty-cells:show; text-align:left;}
+        th,td{border-collapse:collapse;}
+        caption{text-align:left}
+        img.ie6{vertical-align:text-bottom;}/*ie6图片分裂使用*/
+        button{cursor:pointer;}
+        .clearfix{overflow:hidden; zoom:1;}/*清除浮动*/
+
+        .resume_con{padding:5em 0;min-height: 25em;}
+        .all_kind ul li{width: 20%;background: #50A58F;margin:.5em;color: #fff;height: 1.5em;line-height: 1.5em;overflow: hidden;}
+        .all_kind ul li a{color: #fff;}
+    </style>
+</head>
+<body >
+        <!--头部的区域开始-->
+        <div class="header clearfix" style="width:100%;">
+            <div class="charon_logo">
+                <a href="http://www.sunshinepainter.top"><img src="../../images/LOGO.png" alt=""></a>
+            </div>
+            <div class="charon_header_name">
+                <span>CHARON.LI&nbsp;</span>
+                <span >|&nbsp;Web&nbsp;Design. Experience.</span>
+            </div>
+            <div class="charon_header_music">
+                <audio controls="controls"  style="display:none" loop="loop" id="my_music">
+                    <source src="../../music/001.mp3" type="audio/mpeg" />
+                </audio>
+            </div>
+            <div class="music_control">
+                <a href="javascript:;">
+                    <img src="../../images/music_control02.png" alt="">
+                </a>
+                <marquee direction="left" behavior="scroll" scrollamount="1" scrolldelay="0" loop="-1" width="50%" height="20"  hspace="5" vspace="5" style="color:#fff;float: left;padding-top: 18px;" >千年游-李宇春</marquee>
+            </div>
+            <div class="list">
+                <img src="../../images/list.png" alt="">
+            </div>
+            <div class="charon_header_menu">
+                <ul>
+                    <li><a href="javascript:;">关于我</a></li>
+                    <li><a href="index.html">作品集</a></li>
+                    <li><a href="about_us.html">联系我</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--头部的区域结束-->
+        <!-- resume(简历)内容开始 -->
+        <div style="width:100%;">
+            <img style="width:100%;" src="../../images/ban01.jpg" alt="">
+        </div>
+        <div style="width:100%;height:10px;background:#474747;"></div>
+        <div class="resume_con">
+        	<div class="all_kind" style="width:80%;margin:0 auto;">
+		        <ul class="clearfix">
+                    <li><a href="javascript:;">Node Js</a></li>
+                    <li><a href="javascript:;">Javascript</a></li>
+                    <li><a href="javascript:;">HTML+CSS</a></li>
+                    <li><a href="javascript:;">Jquery</a></li>
+                    <li><a href="javascript:;">AJAX</a></li>
+                    <li><a href="javascript:;">COOKIE&SESSION</a></li>
+		            <!-- <li><a href="ajax01.html">1、ajax详解</a></li>
+                    <li><a href="url_get.html">2、url参数的获取方法</a></li>
+                    <li><a href="cookie_01.html" target="_blank">3、cookie 清除</a></li>
+                    <li><a href="live_on.html" target="_blank">4、jquery的live不兼容</a></li>
+                    <li><a href="jq_study01.html" target="_blank">5、each()的用法</a></li>
+                    <li><a href="js_study01.html" target="_blank">6、一道javascript题目</a></li>
+                    <li><a href="http_study.html" target="_blank">7、http请求状态</a></li>
+                    <li><a href="javascript:;">8、nodejs取参四种方法req.body,req.params,req.param,req.body</a></li>
+                    <li><a href="https://cnodejs.org/topic/581b0c4ebb9452c9052e7acb">9、Node.js重写的过程</a></li>
+                    <li><a href="https://cnodejs.org/topic/5856478b491e0754534fb0f4">10、从零开始写一个 Node.js 的 MongoDB 驱动库</a></li>
+                    <li><a href="javascript:;">11、</a></li>
+                    <li><a href="javascript:;">12、</a></li>
+                    <li><a href="javascript:;">13、</a></li>
+                    <li><a href="javascript:;">14、</a></li>
+                    <li><a href="javascript:;">15、</a></li> -->
+		        </ul>
+		    </div>
+        </div>
+        
+         <!--底部的footer部分开始-->
+        <div class="charon_footer">
+            © <script LANGUAGE="JavaScript">var now = new Date();var year = now.getYear();if (year < 2000) year = year + 1900;document.write(year);</script> BY CHARON LI
+            <div class="contact_me">
+                CONTACT&nbsp;&nbsp;&nbsp;&nbsp;ME
+            </div>
+        </div>
+        <!--底部的footer部分结束-->
+        <em >
+            <img src="images/music_02.png" alt="" id="music_on">
+        </em>
+    
+    </div>
+    <!--password input-->
+        <div class="charon_password" style="dispaly:none;">
+            <p>请输入密码解锁</p>
+            <input type="password" placeholder="此处请输入密码" value="">
+            <span>×</span>
+            <a href="javascript:corfirm();">确认</a><a href="javascript:;" class="cancle">取消</a>
+        </div>
+    </div>
+    <div class="cover"></div>
+</body>
+</html>

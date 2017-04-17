@@ -1,0 +1,13 @@
+*{ margin: 0; padding: 0; text-decoration: none;}
+ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,p{padding:0; margin:0;}
+ul,dl{list-style:none; margin:0; padding:0;}
+body { font-family: "微软雅黑"; font-size: 14px; color: #414141; word-wrap: break-word; behavior: url("csshover.htc");}
+button, input, select, textarea { font: 12px/1.5 Arial, "宋体", Helvetica, Verdana, sans-serif; word-wrap: break-word; color: #565756; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; font-size: 100%; }
+img { border: none; border: 0; vertical-align: middle;margin: 0; }
+a { text-decoration: none; outline: none;color:#414141; }
+p { margin: 0px; padding: 0px;}
+input, select, textarea { vertical-align: middle; *font-size:100%;}
+input { margin: 0; outline: none; padding: 0; }
+input::-ms-clear {display:none;}
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }

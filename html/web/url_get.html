@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <link rel="shortcut icon" href="../../images/favicon.ico" />
+    <link rel="stylesheet" href="../../css/web.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/web.js"></script>
+    <style>
+    	 *{padding:0; margin:0; }
+        body{font-family:"微软雅黑"; font-weight:normal; font-size:12px; line-height:23px; color:#7c7b7b;}
+        img{border:0;}
+        ol,ul,li{list-style-position:inside;list-style:none;}
+        table{border-collapse:collapse; border-spacing:0; empty-cells:show; text-align:left;}
+        th,td{border-collapse:collapse;}
+        caption{text-align:left}
+        img.ie6{vertical-align:text-bottom;}/*ie6图片分裂使用*/
+        button{cursor:pointer;}
+        .clearfix{overflow:hidden; zoom:1;}/*清除浮动*/
+
+        .resume_con{padding:5em 0;min-height: 25em;}
+        .all_kind ul li{width: 10%;background: #50A58F;margin:1em;color: #fff;text-align: center;height: 1.5em;line-height: 1.5em;float: left;}
+        .all_kind ul li a{color: #fff;}
+    </style>
+</head>
+<body >
+        <!--头部的区域开始-->
+        <div class="header clearfix" style="width:100%;">
+            <div class="charon_logo">
+                <a href="http://www.sunshinepainter.top"><img src="../../images/LOGO.png" alt=""></a>
+            </div>
+            <div class="charon_header_name">
+                <span>CHARON.LI&nbsp;</span>
+                <span >|&nbsp;Web&nbsp;Design. Experience.</span>
+            </div>
+            <div class="charon_header_music">
+                    <!-- autoplay="autoplay" -->
+                <audio controls="controls"  style="display:none" loop="loop" id="my_music">
+                    <source src="../../music/001.mp3" type="audio/mpeg" />
+                </audio>
+            </div>
+            <div class="music_control">
+                <a href="javascript:;">
+                    <img src="../../images/music_control02.png" alt="">
+                </a>
+                <marquee direction="left" behavior="scroll" scrollamount="1" scrolldelay="0" loop="-1" width="50%" height="20"  hspace="5" vspace="5" style="color:#fff;float: left;padding-top: 18px;" >千年游-李宇春</marquee>
+            </div>
+            <div class="list">
+                <img src="../../images/list.png" alt="">
+            </div>
+            <div class="charon_header_menu">
+                <ul>
+                    <li><a href="javascript:;">关于我</a></li>
+                    <li><a href="index.html">作品集</a></li>
+                    <li><a href="about_us.html">联系我</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--头部的区域结束-->
+        <!-- resume(简历)内容开始 -->
+        <div class="resume_con">
+        	<div class="all_kind" style="width:80%;margin:0 auto;">
+		        <p style="color:#405A08;font-size:14px;" >用JS获取地址栏参数的方法（超级简单）</p>
+                <p style="color:#F92659;font-size:16px;"><b>方法一：采用正则表达式获取地址栏参数：（ 强烈推荐，既实用又方便！）</b></p>
+
+                <p>function GetQueryString(name)</p>
+                <p>{</p>
+                     <p style="text-indent:2em;">var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");</p>
+                     <p style="text-indent:2em;"> var r = window.location.search.substr(1).match(reg);</p>
+                     <p style="text-indent:2em;">if(r!=null)return  unescape(r[2]); return null;</p>
+                <p>}</p>
+                 
+                <p>// 调用方法</p>
+                <p> alert(GetQueryString("参数名1"));</p>
+                <p>alert(GetQueryString("参数名2"));</p>
+                <p>alert(GetQueryString("参数名3"));</p>
+                <p style="color:#F92659;font-size:14px;">下面举一个例子:</p>
+
+                <p>若地址栏URL为：abc.html?id=123&url=http://www.maidq.com</p>
+
+                <p>那么，但你用上面的方法去调用：alert(GetQueryString("url"));</p>
+
+                <p>则会弹出一个对话框：内容就是 <b>http://www.maidq.com</b></p>
+
+                <p>如果用：alert(GetQueryString("id"));那么弹出的内容就是 <b>123</b> 啦；</p>
+
+                <p>当然如果你没有传参数的话，比如你的地址是 abc.html 后面没有参数，那强行输出调用结果有的时候会报错：</p>
+
+                <p>所以我们要加一个判断 ，判断我们请求的参数是否为空，首先把值赋给一个变量：</p>
+
+                <p>var myurl=GetQueryString("url");</p>
+                <p>if(myurl !=null && myurl.toString().length>1)</p>
+                <p style="text-indent:2em;">{</p>
+                <p style="text-indent:4em;">alert(GetQueryString("url"));</p>
+                <p style="text-indent:2em;">}</p>
+                <p style="color:#F92672">这样就不会报错了！</p>
+
+                <p style="color:#F92672;font-size:16px;">方法二：传统方法</p>
+
+                <p> &lt;script type="text/javascript"&gt;</p>
+                    <p  style="text-indent:2em;">function UrlSearch()</p> 
+                        <p style="text-indent:4em;">{</p>
+                           <p style="text-indent:6em;">var name,value;</p> 
+                           <p style="text-indent:6em;">var str=location.href; //取得整个地址栏</p>
+                           <p style="text-indent:6em;">var num=str.indexOf("?") </p>
+                           <p style="text-indent:6em;">str=str.substr(num+1); //取得所有参数   stringvar.substr(start [, length ]</p>
+
+                           <p style="text-indent:6em;">var arr=str.split("&"); //各个参数放到数组里</p>
+                           <p style="text-indent:6em;">for(var i=0;i < arr.length;i++){ </p>
+                            <p style="text-indent:6em;"> num=arr[i].indexOf("="); </p>
+                            <p style="text-indent:6em;">if(num>0){ </p>
+                                <p style="text-indent:8em;">name=arr[i].substring(0,num);</p>
+                                <p style="text-indent:8em;">value=arr[i].substr(num+1);</p>
+                                <p style="text-indent:8em;">this[name]=value;</p>
+                             <p style="text-indent:8em;">} </p>
+                            <p style="text-indent:6em;">} </p>
+                        <p style="text-indent:4em;">} </p>
+                    <p style="text-indent:4em;">var Request=new UrlSearch(); //实例化</p>
+                    <p style="text-indent:4em;">alert(Request.id);</p>
+                <p></script></p>
+
+                <p>比如说把这个代码存为1.html</p>
+
+                <p>那么我要访问1.html?id=test</p>
+
+                <p>这个时候就取到test的值了</p>
+
+
+                <p>在html里调用</p>
+                <p>&lt;script type="text/javascript"></p>
+                <p>var a="http://baidu.com";</p>
+                <p></script></p>
+                <p></head></p>
+                <p><body></p>
+                <p><a id="a1" href="">sadfsdfas</a></p>
+                <p><script></p>
+                <p style="text-indent:2em;"> var a1=document.getElementById("a1");</p>
+                <p style="text-indent:2em;">a1.href=a;</p>
+                <p></script></p>
+
+                <p><script type="text/javascript"> </p>
+                <p>var a="http://xxx.com/gg.htm?cctv"; </p>
+                <p>var s=a.indexOf("?"); </p>
+                <p>var t=a.substring(s+1);// t就是?后面的东西了 </p>
+
+                <p></script></p>
+
+                <p>stringvar.substr(start [, length ]</p>
+
+                <p>返回一个从指定位置开始的指定长度的子字符串。</p>
+
+                <p>stringvar</p>
+
+                <p>必选项。要提取子字符串的字符串文字或 String 对象。</p>
+
+                <p style="color:#F92672">start</p>
+
+                <p>必选项。所需的子字符串的起始位置。字符串中的第一个字符的索引为 0。</p>
+
+                <p>length</p>
+
+                <p>可选项。在返回的子字符串中应包括的字符个数。</p>
+
+                <p>如果 length 为 0 或负数，将返回一个空字符串。如果没有指定该参数，则子字符串将延续到 stringvar 的最后。</p>
+
+                <p>下面列举出一些相关的参数：</p>
+
+                <p><b>str.toLowerCase()   转换成小写 </b></p> 
+                <p><b>str.toUpperCase()   字符串全部转换成大写</b></p>
+
+                <h4>URL即:统一资源定位符 (Uniform Resource Locator, URL) </h4>
+                <p>完整的URL由这几个部分构成：</p>
+                <p>scheme://host:port/path?query#fragment </p>
+                <p>scheme:通信协议</p>
+                <p>常用的http,ftp,maito等</p>
+
+                <p>host:主机</p>
+                <p>服务器(计算机)域名系统 (DNS) 主机名或 IP 地址。</p>
+
+                <p>port:端口号</p>
+                <p>整数，可选，省略时使用方案的默认端口，如http的默认端口为80。</p>
+
+                <p>path:路径</p>
+                <p>由零或多个"/"符号隔开的字符串，一般用来表示主机上的一个目录或文件地址。</p>
+
+                <p>query:查询</p>
+                <p>可选，用于给动态网页（如使用CGI、ISAPI、PHP/JSP/ASP/ASP.NET等技术制作的网页）传递参数，可有多个参数，用"&"符号隔开，每个参数的名和值用"="符号隔开。</p>
+
+                <p>fragment:信息片断</p>
+                <p>字符串，用于指定网络资源中的片断。例如一个网页中有多个名词解释，可使用fragment直接定位到某一名词解释。(也称为锚点.)</p>
+
+                <p>对于这样一个URL</p>
+
+                <h3>http://www.maidq.com/index.html?ver=1.0&id=6#imhere</h3>
+
+                <p>我们可以用javascript获得其中的各个部分</p>
+                <p><h3>1, window.location.href</h3></p>
+                <p>整个URl字符串(在浏览器中就是完整的地址栏)</p>
+                <p> 本例返回值: http://www.maidq.com/index.html?ver=1.0&id=6#imhere</p>
+
+                <h3>2,window.location.protocol</h3>
+                <p>URL 的协议部分</p>
+                <p>本例返回值:http:</p>
+
+                <h3>3,window.location.host</h3>
+                <p>URL 的主机部分</p>
+                <p>本例返回值:www.maidq.com</p>
+
+                <h3>4,window.location.port</h3>
+                <p>URL 的端口部分</p>
+                <p>如果采用默认的80端口(update:即使添加了:80)，那么返回值并不是默认的80而是空字符</p>
+                <p>本例返回值:""</p>
+
+                <h3>5,window.location.pathname</h3>
+                <p>URL 的路径部分(就是文件地址)</p>
+                <p>本例返回值:/fisker/post/0703/window.location.html</p>
+
+                <h3>6,window.location.search</h3>
+                <p>查询(参数)部分</p>
+                <p>除了给动态语言赋值以外，我们同样可以给静态页面,并使用javascript来获得相信应的参数值</p>
+                <p>本例返回值:?ver=1.0&id=6</p>
+
+                <h3>7,window.location.hash</h3>
+                <p>锚点</p>
+                <p>本例返回值:#imhere</p>
+		    </div>
+        </div>
+        
+         <!--底部的footer部分开始-->
+        <div class="charon_footer">
+            © <script LANGUAGE="JavaScript">var now = new Date();var year = now.getYear();if (year < 2000) year = year + 1900;document.write(year);</script> BY CHARON LI
+            <div class="contact_me">
+                CONTACT&nbsp;&nbsp;&nbsp;&nbsp;ME
+            </div>
+        </div>
+        <!--底部的footer部分结束-->
+        <em >
+            <img src="images/music_02.png" alt="" id="music_on">
+        </em>
+    
+    </div>
+    <!--password input-->
+        <div class="charon_password" style="dispaly:none;">
+            <p>请输入密码解锁</p>
+            <input type="password" placeholder="此处请输入密码" value="">
+            <span>×</span>
+            <a href="javascript:corfirm();">确认</a><a href="javascript:;" class="cancle">取消</a>
+        </div>
+    </div>
+    <div class="cover"></div>
+</body>
+</html>

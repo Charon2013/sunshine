@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <link rel="shortcut icon" href="../../images/favicon.ico" />
+    <link rel="stylesheet" href="../../css/web.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/web.js"></script>
+    <style>
+    	 *{padding:0; margin:0; }
+        body{font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:12px; line-height:23px; color:#7c7b7b;}
+        img{border:0;}
+        ol,ul,li{list-style-position:inside;list-style:none;}
+        table{border-collapse:collapse; border-spacing:0; empty-cells:show; text-align:left;}
+        th,td{border-collapse:collapse;}
+        caption{text-align:left}
+        img.ie6{vertical-align:text-bottom;}/*ie6图片分裂使用*/
+        button{cursor:pointer;}
+        .clearfix{overflow:hidden; zoom:1;}/*清除浮动*/
+
+        .resume_con{padding:1em 0;width: 90%;margin:0 auto;}
+        .resume_con img{width:100%;}
+        .Social-Login .Social {display: none !important;}
+        #uyan-copyright{display: none;}
+        .pull-right{display: none;}
+    </style>
+</head>
+<body ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false" onselectstart="event.returnValue=false">
+        <!--头部的区域开始-->
+        <div class="header clearfix" style="width:100%;">
+            <div class="charon_logo">
+                <a href="http://www.sunshinepainter.top"><img src="../../images/LOGO.png" alt=""></a>
+            </div>
+            <div class="charon_header_name">
+                <span>CHARON.LI&nbsp;</span>
+                <span >|&nbsp;Web&nbsp;Design. Experience.</span>
+            </div>
+            <div class="charon_header_music">
+                <audio controls="controls"  style="display:none" loop="loop" id="my_music">
+                    <source src="../../music/001.mp3" type="audio/mpeg" />
+                </audio>
+            </div>
+            <div class="music_control">
+                <a href="javascript:;">
+                    <img src="../../images/music_control02.png" alt="">
+                </a>
+                <marquee direction="left" behavior="scroll" scrollamount="1" scrolldelay="0" loop="-1" width="50%" height="20"  hspace="5" vspace="5" style="color:#fff;float: left;padding-top: 18px;" >千年游-李宇春</marquee>
+            </div>
+            <div class="list">
+                <img src="../../images/list.png" alt="">
+            </div>
+            <div class="charon_header_menu">
+                <ul>
+                    <li><a href="javascript:;">关于我</a></li>
+                    <li><a href="index.html">作品集</a></li>
+                    <li><a href="about_us.html">联系我</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--头部的区域结束-->
+
+            <div style="width:49%;margin:0 auto; padding:2em 0">
+                <img width="100%;" src="../../images/s_tow0.png" alt="">
+            </div>
+        </div>
+        <!-- resume(简历)内容开始 -->
+        <div class="resume_con" style="position:relative;">
+        	<!-- UY BEGIN -->
+            <div style="width:116px;height:51px;position:absolute;bottom:0;;right:0;background:#fff;"></div>
+            <div id="uyan_frame"></div>
+            <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2118648"></script>
+            <!-- UY END -->
+            <!-- UYAN NEW COMMENT BEGIN -->
+            <!-- <div id="uyan_newcmt_unit"></div>
+            <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2118648"></script>  --><!-- 如果已经过加载此行JS，即可不用重复加载 -->
+            <!-- UYAN NEW COMMENT END -->
+        </div>
+        
+         <!--底部的footer部分开始-->
+        <div class="charon_footer">
+            © <script LANGUAGE="JavaScript">var now = new Date();var year = now.getYear();if (year < 2000) year = year + 1900;document.write(year);</script> BY CHARON LI
+            <div class="contact_me">
+                CONTACT&nbsp;&nbsp;&nbsp;&nbsp;ME
+            </div>
+            <div class="mail"><a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WGxpbGppaGlvYRgpKXY7NzU" style="text-decoration:none;"><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_01.png"/></a></div>
+
+        <div style="background:#363636">
+        </div>
+        <!--底部的footer部分结束-->
+        <em >
+            <img src="images/music_02.png" alt="" id="music_on">
+        </em>
+    
+    </div>
+    <!--password input-->
+        <div class="charon_password" style="dispaly:none;">
+            <p>请输入密码解锁</p>
+            <input type="password" placeholder="此处请输入密码" value="">
+            <span>×</span>
+            <a href="javascript:corfirm();">确认</a><a href="javascript:;" class="cancle">取消</a>
+        </div>
+    </div>
+    <div class="cover"></div>
+</body>
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script>
+    $(function(){
+        $('.Social-Login .Social').css({display:"none"});
+    });
+</script>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Web.Design</title>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="../../css/web.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script type="text/javascript" src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/web.js"></script>
+    <style>
+        .container_swf{height: 200px;}
+    </style>
+</head>
+<body>
+	<div class="warp">
+        <!--头部的区域开始-->
+        <div class="header clearfix">
+            <div class="charon_logo">
+                <a href="http://www.sunshinepainter.top"><img src="../../images/LOGO.png" alt=""></a>
+            </div>
+            <div class="charon_header_name">
+                <span>CHARON.LI&nbsp;</span>
+                <span >|&nbsp;Web&nbsp;Design. Experience.</span>
+            </div>
+            <div class="charon_header_music">
+                <audio controls="controls"  style="display:none" loop="loop" id="my_music">
+                    <source src="../../music/001.mp3" type="audio/mpeg" />
+                </audio>
+            </div>
+            <div class="music_control">
+                <a href="javascript:;">
+                    <img src="../../images/music_control02.png" alt="">
+                </a>
+                <marquee direction="left" behavior="scroll" scrollamount="1" scrolldelay="0" loop="-1" width="50%" height="20"  hspace="5" vspace="5" style="color:#fff;float: left;padding-top: 18px;" >千年游-李宇春</marquee>
+            </div>
+            <div class="list">
+                <img src="../../images/list.png" alt="">
+            </div>
+            <div class="charon_header_menu">
+                <ul>
+                    <li><a href="javascript:;">关于我</a></li>
+                    <li><a href="index.html">作品集</a></li>
+                    <li><a href="about_us.html">联系我</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--头部的区域结束-->
+
+        <!--内容的编辑部分开始-->
+        <div class="charon_container01 ">
+            <div class="container_swf ">
+                <ul class="clearfix">
+                    <li><a href=""> <img src="../../images/fast01.png" alt=""> </a></li>
+                    <li><a href=""> <img src="../../images/fast02.png" alt=""> </a></li>
+                    <li><a href=""> <img src="../../images/fast03.png" alt=""> </a></li>
+                </ul>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+        <!--内容的编辑部分结束-->
+
+        <!--底部的footer部分开始-->
+        <div class="charon_footer">
+            © <script LANGUAGE="JavaScript">var now = new Date();var year = now.getYear();if (year < 2000) year = year + 1900;document.write(year);</script> BY CHARON LI
+            <div class="contact_me">
+                CONTACT&nbsp;&nbsp;&nbsp;&nbsp;ME
+            </div>
+        </div>
+        <!--底部的footer部分结束-->
+        <em >
+            <img src="images/music_02.png" alt="" id="music_on">
+        </em>
+        <!--password input-->
+        <div class="charon_password" style="dispaly:none;">
+            <p>请输入密码解锁</p>
+            <input type="password" placeholder="此处请输入密码" value="">
+            <span>×</span>
+            <a href="javascript:corfirm();">确认</a><a href="javascript:;" class="cancle">取消</a>
+        </div>
+    </div>
+    <div class="cover"></div>
+</body>
+</html>

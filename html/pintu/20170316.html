@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <style>
+        #mylist{
+            width: 240px;
+            height: 160px;
+            background: #eee;
+            padding: 5px;
+            list-style: none;
+        }
+        #mylist a{
+            text-decoration: none;
+            color:#0077B0;
+        }
+        #mylist a:hover{
+            text-decoration: underline;
+        }
+        #mylist li{
+            width: 80px;
+            height: 80px;
+            float: left;
+        }
+        #mylist li img{width: 100%}
+    </style>
+
+</head>
+<body>
+    <ul id="mylist">
+        <li><img src="1.jpg" alt=""></li>
+        <li><img src="2.jpg" alt=""></li>
+        <li><img src="3.jpg" alt=""></li>
+        <li><img src="4.jpg" alt=""></li>
+        <li><img src="5.jpg" alt=""></li>
+        <li><img src="6.jpg" alt=""></li>
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#mylist" ).sortable();
+            $( "#mylist" ).disableSelection();
+        } );
+        </script>
+</body>
+</html>

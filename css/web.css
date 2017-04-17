@@ -1,0 +1,102 @@
+@charset "utf-8";
+/*oswald字体的引入*/
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Oswald Regular'), local('Oswald-Regular'), url(http://fonts.gstatic.com/s/oswald/v11/pEobIV_lL25TKBpqVI_a2w.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* CSS Document */
+
+/*header部分的css开始*/
+.header{width: 100%;height: 67px;background: #474747}
+.charon_logo{width:12%;height: 67px;background: #525050;float: left;}
+.charon_logo a{width: 100%;height: 67px;display: block;background: url(../images/shadow2.png) 0 0 no-repeat;}
+.charon_logo img{width:95%;margin-top: 13px;margin-left: 5%;}
+.charon_header_name{width: 35%;height: 67px;background:url(../images/shadow2.png) 0 0 no-repeat; float: left; color: #999}
+.charon_header_name span{  line-height: 67px;  font-family: Oswald;  font-weight: normal;  }
+.charon_header_name span:nth-of-type(1){font-size: 1.3em;margin-left: 22px;}
+.charon_header_name span:nth-of-type(2){font-size: 1.15em;}
+/*the part of menu*/
+.list{width: 67px;height: 67px;float: right;display: none;}
+.charon_header_menu{width: 25%;height: 67px;float: right;color: #999;}
+.charon_header_menu li{width:30%;height:67px;line-height:67px;float: left;text-align: center;}
+.charon_header_menu li a{color: #999;font-size: 1.2em;font-family: "微软雅黑"}
+.charon_header_menu li a:hover{color: #53AFB6;}
+.charon_header_music{float: left;}
+/*header部分的css结束*/
+
+/*container部分的样式开始*/
+.charon_container{width: 100%;background: #eaeaea}
+.charon_container li{width: 33.3333%;height: auto; float: left;position: relative}
+.charon_container li img{width: 100%}
+.charon_container li span{width: 100%;height: 100%;display: block;position: absolute;top:0;left:0;background: rgba(0,0,0,0.5);z-index: 700;}
+/*.charon_container li span:hover{background: rgba(68,189,198,0.5)}*/
+.charon_container li i{width: 100%;height: 100%;display: block;position: absolute;top:0;left:0;z-index: 800;cursor: pointer;}
+.charon_container li i img{width: 100%}
+#music_on{  width: 60px;height: 60px;display: inline-block;position: absolute;top:5px;right:5px; display: none}
+#music_on {width: 100%;
+animation:myfirst 2s linear infinite; -webkit-animation:myfirst 2s linear infinite; animation-play-state:running; -webkit-animation-play-state:running;}
+@keyframes myfirst {0% {transform:rotate(0deg);} 100% {transform:rotate(360deg);}}
+@-webkit-keyframes myfirst {0% {transform:rotate(0deg);} 100% {transform:rotate(360deg);}}
+
+/*底部的footer部分的样式开始*/
+.charon_footer{width: 100%;text-align: center;background: #333333;padding: 50px 0 80px;color: #999}
+.contact_me{width: 170px;height: 30px;text-align: center;line-height: 30px;border-radius: 15px;float: right;margin-right: 50px;background: #444;cursor: pointer;}
+
+/*password*/
+.cover{width: 100%;height: 100%;position: absolute;top:0;left:0;background: url(../images/cover.png) 0 0 repeat;z-index: 899;display: none}
+.charon_password{width: 300px;height:170px;position: fixed;top:20px;left:30px;background: white;border-radius: 15px;display: none;z-index: 900;}
+.charon_password span{width: 20px;height: 20px;display: block;background: #666;border-radius: 10px;color:#fff;text-align: center;line-height: 20px;font-size: 18px;position: absolute;top:5px;right:5px;}
+.charon_password span:hover{background: #44BDC6;}
+.charon_password p{text-align: center;margin-top: 15px;margin-bottom: 15px;}
+.charon_password input{width: 80%;height: 30px;padding-left: 5px;margin-left: 8.5%;border-radius: 5px;border: 1px solid #BFBCBC;outline: none}
+.charon_password a{width: 90px;height: 30px;display:block;text-align: center;line-height: 30px;border-radius: 10px;background: #666;float: left;margin: 20px 5px 0 33px;color: #fff;}
+.charon_password a:hover{background: #44BDC6}
+
+/*music control*/
+.music_control{height: 67px;width: 20%;float: left;}
+.music_control a{width: 50px;height: 50px;display: block;margin-top: 8px;opacity: 0.5; float: left;}
+.music_control a img{width: 100%;}
+
+/*手机模式*/
+@media screen and (max-width: 480px){
+    .charon_logo{width:30%;height: 67px;background: #525050;float: left;}
+    .charon_logo img{width:95%;margin-top: 23px;margin-left: 5%;}
+    .charon_header_name{display: none;}
+    .music_control{display: block}
+    .charon_container li{width:100%;height: auto;position: relative;float: none}
+    .charon_footer{width: 100%;text-align: center;background: #333333;padding: 50px 0 80px;color: #999}
+    .contact_me{width: 170px;height: 30px;text-align: center;line-height: 30px;border-radius: 15px;float: right;margin-right: 50px;background: #444;cursor: pointer;display: none}
+    .list{display: block;width: 50px;height: 50px;float: right;margin-right: 5px;margin-top: 8px;}
+    .list img{width: 100%;}
+    .charon_header_menu{width: 17%;height:auto;position: fixed;right:0;top:67px;display: none;z-index: 900}
+    .charon_header_menu ul{padding: 0;margin: 0;}
+    .charon_header_menu li{width:100%;height:25px;line-height:25px;float: none;text-align: center;margin-top: 10px;}
+    .music_control{display: none}
+    #music_on{  width: 3em;height: 3em;display: inline-block;position: absolute;top:5px;right:5px;z-index: 1000;position: fixed;top:79px;right:5px;  }
+#music_on:hover{-webkit-animation:music_on 2s linear infinite;}
+
+    @-webkit-keyframes music_on {
+    　　0%{-webkit-transform:rotate(0deg)}
+
+    　　50%{-webkit-transform:rotate(180deg)}
+
+    　　100%{-webkit-transform:rotate(360deg)}
+}
+}
+
+
+/*大于480/js做出了隐藏菜单的限制，所以屏幕放大的时候不会显示*/
+/*
+@media screen and (min-width: 960px){
+    .charon_header_menu{display: block;z-index: 900}
+}*/
+/*简介页面*/
+.charon_container01{width: 100%;background: #eaeaea;height: auto;}
+.charon_container01 li{width:100%;height: auto; float: left;}
+.charon_container01 li a{width: 100%;height: 100%;display: block;}
+.charon_container01 li img{width:100%}
+.container_swf ul{position: relative;}
+.container_swf ul li{position: absolute;left: 0;top: 0}
